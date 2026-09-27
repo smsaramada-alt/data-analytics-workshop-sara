@@ -466,12 +466,15 @@ st.caption(
 st.header("Decision Rule")
 
 st.write(
-    "หลังจบการทดลอง 14 วัน จะเปรียบเทียบ Video × Daily Phrases "
-    "กับ Baseline ของ Carousel × Daily Phrases"
+    "หลังจบ Structured Pilot Test 14 วัน จะวิเคราะห์เฉพาะ 12 posts "
+    "(Carousel 6 + Video 6) โดยเปรียบเทียบ Median Views / Post และ "
+    "Median Interaction Rate ระหว่างสอง Format ในช่วงเวลาเดียวกัน "
+    "และใช้ Historical Performance ของ Carousel × Daily Phrases "
+    "(996 Views / 3.71%) เป็น Benchmark ประกอบการตัดสินใจ"
 )
 
 st.markdown("""
-- **Consider Increasing Video** — หาก Video มี Median Views ≥ 996 และ Interaction Rate ≥ 3.71%
-- **Maintain Current Mix** — หาก Video ยังไม่สามารถรักษา Performance ได้ถึง Baseline
-- **Continue Testing** — หากผลยังไม่ชัดเจนหรือมีความผันผวนสูง
+- **Consider Increasing Video** — หาก Video มี Performance เทียบเท่าหรือสูงกว่า Carousel ใน Pilot และสามารถรักษาระดับ Historical Benchmark ได้
+- **Maintain Current Mix** — หาก Video มี Performance ต่ำกว่า Carousel และไม่ถึง Historical Benchmark
+- **Continue Testing** — หากผลของสอง Metrics ไม่สอดคล้องกัน หรือผลยังมีความผันผวนสูง
 """)
